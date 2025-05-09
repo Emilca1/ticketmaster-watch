@@ -15,7 +15,7 @@ sudo apt install python3 python3-venv python3-pip -y
 Create venv
 ```
 python3 -m venv ticketmaster-watch
-source venv/bin/activate
+source ticketmaster-watch/bin/activate
 ```
 
 Install dependances
@@ -25,14 +25,13 @@ pip install requests beautifulsoup4
 
 create the watcher.py file
 ```
+cd ticketmaster-watcher
 nano watcher.py
 ```
 
-
-
 Test it
 ```
-source venv/bin/activate
+source ticketmaster-watch/bin/activate
 python watcher.py
 ```
 
@@ -40,5 +39,5 @@ python watcher.py
 If you want to automate it
 ```
 crontab -e
-*/10 * * * * /srv/ticketmaster-watcher/venv/bin/python /srv/ticketmaster-watcher/watcher.py
+*/10 * * * * /srv/ticketmaster-watcher/bin/python /srv/ticketmaster-watcher/watcher.py
 ```
